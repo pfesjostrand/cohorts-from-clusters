@@ -1,6 +1,6 @@
 *This is an ongoing project, mostly on Github for backup, expected to be completed by February 2020*
 
-**Cohorts from clusters** is a data analysis and political science project attempting to delimit birth
+*Cohorts from clusters* is a data analysis and political science project attempting to delimit birth
 cohorts, i.e. generations, of political views by analysis of longitudinal survey data on political topics. 
 Completion expected by February 2020. It uses data from the CSES IMD project and SNES (Swedish national
 election surveys).
@@ -14,12 +14,12 @@ but well it also attempts to offer some [reproducibility](http://t-redactyl.io/b
 
 For license and space reasons data is not included here. Scripts require the following datasets:
 
-**CSES IMD 10/2019 relsease**
-The scripts use the full CSES IMD data set in .rdata format. This dan be downloaded from
+*CSES IMD 10/2019 relsease*  
+The scripts use the full CSES IMD 2019 data set in .rdata format. This dan be downloaded from
 [CSES](https://cses.org/data-download/cses-integrated-module-dataset-imd/).
 
-**SNES 1970 through 2010** 
-The analysis and scripts uses data from 1970 through 2010. The SNES (Swedish National Election
+*SNES 1970 through 2010*  
+The analysis and scripts uses data from 1973 through 2006. The SNES (Swedish National Election
 Survey) is not publicaly available but can be accesed by application see
 [here](https://valforskning.pol.gu.se/english/data__documentation).
 
