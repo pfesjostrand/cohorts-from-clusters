@@ -2,24 +2,23 @@
 .Rhistory
 .RData
 .Ruserdata
+workspace.RData
+*.Rproj
 
 data/fixed_cses/
 data/fixed_snes/
+
 output/data/
+output/
+
+docs/
+docs/other/literature 
+docs/.other/
+
+code/.other/
 
 docs/*.html
 docs/*.nb.html  
 *.nb.html
 *.html
-
-docs/other/literature 
-docs/
-
-test/
-
-workspace.RData
-*.Rproj
-
-output/
-
 *.other*

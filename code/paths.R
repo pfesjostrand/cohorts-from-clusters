@@ -9,6 +9,7 @@ stopifnot("here" %in% (.packages()))
 PATHS      <- list()
 PATHS$data <- list()
 PATHS$outp <- list()
+PATHS$figs <- list()
 
 
 
@@ -92,3 +93,9 @@ PATHS$outp$se_snes_small_analysis  <-
 
 PATHS$outp$se_cses_small_analysis  <- 
   here("output", "data", "paper1", "se_cses_small")
+
+
+# FIGS  -----------------------------
+
+PATHS$figs$left_right_placement <- 
+  here("figs", "left_right_placement")

@@ -366,6 +366,11 @@ select(snes_main, eval_c, eval_m, eval_v, eval_s, left_right_placement) %>%
          ) -> 
   snes_main[c("eval_c", "eval_m", "eval_v", "eval_s","left_right_placement")]
 
+# VU79 through 88 coded the evaluations as -5 to +5 later studies 0 to 10. Older studies modified. 
+snes_main[snes_main$ID_study %in% c("VU1979", "VU1982", "VU1985", "VU1988"),][
+    c("ID_study","eval_c", "eval_m", "eval_v", "eval_s")] %<>%
+  modify((function(x) if(is.numeric(x)) return(x+5) else return(x)))
+         
 #TODO Homogenize education variable, curretly deselected do to different codings
 snes_main <- select(snes_main, -education)
 

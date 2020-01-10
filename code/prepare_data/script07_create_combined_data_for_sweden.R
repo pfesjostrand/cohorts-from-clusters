@@ -69,6 +69,14 @@ se_combined <- se_cses %>%
          snes_pid_index, cses_pid_index_1, cses_pid_index_2,
          cses_pid_degree, left_right_placement, everything())
 
+se_combined_full <- se_cses %>% 
+  filter(survey_year > 2002) %>%
+  bind_rows(snes) %>%
+  mutate("age" = survey_year-birth_year) %>%
+  select(ID, ID_study, survey_year, birth_year, age, gender, 
+         snes_pid_index, cses_pid_index_1, cses_pid_index_2,
+         cses_pid_degree, left_right_placement, everything())
+
 se_cses_small <- se_cses %>% 
   mutate("age" = survey_year-birth_year) %>%
   select(ID, ID_study, survey_year, birth_year, age, gender, 
@@ -88,12 +96,12 @@ se_snes_small <- snes %>%
 # Save data ------------------------------------------------------------------
 
 saveRDS(se_combined,   PATHS$outp$se_combined)
-saveRDS(se_cses_small, PATHS$outp$se_combined)
-saveRDS(se_snes_small, PATHS$outp$se_combined)
+saveRDS(se_snes_small, PATHS$outp$se_snes_small)
+saveRDS(se_cses_small, PATHS$outp$se_cses_small)
 
 saveRDS(se_combined,   PATHS$outp$se_combined_analysis)
-saveRDS(se_cses_small, PATHS$outp$se_snes_small)
-saveRDS(se_snes_small, PATHS$outp$se_cses_small)
+saveRDS(se_snes_small, PATHS$outp$se_snes_small_analysis)
+saveRDS(se_cses_small, PATHS$outp$se_cses_small_analysis)
 
 
 
@@ -101,4 +109,5 @@ saveRDS(se_snes_small, PATHS$outp$se_cses_small)
 
 rm(se_combined); rm(snes); rm(se_cses); rm(by_polity)
 rm(se_cses_small); rm(se_snes_small); rm(snes_main)
+rm(se_combined_full)
 gc()
